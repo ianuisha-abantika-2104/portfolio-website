@@ -1,14 +1,356 @@
-@media screen and (max-width: 1200px) {
-  #desktop-nav {
-    display: none;
-  }
-  #hamburger-nav {
-    display: flex;
-  }
+/* =========================================
+   MEDIA QUERIES
+   Extra responsive adjustments
+   ========================================= */
+
+/* TABLET */
+@media (max-width: 1000px) {
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .hero-content {
+        max-width: 800px;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(3rem, 7vw, 4.5rem);
+    }
+
+    .hero-visual {
+        min-height: 420px;
+    }
+ 
+    .proof-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+ 
+    .proof-item {
+        min-height: 110px;
+    }
+ 
+    .proof-item:nth-child(3) {
+        border-left: 1px solid var(--border);
+    }
+ 
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+ 
+    .capabilities-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
-@media (max-width: 600px) {
-  .about-cards-row {
-    flex-direction: column;
-  }
+
+/* MOBILE (<=768px)*/
+@media (max-width: 768px) {
+    
+    section {
+        padding: 80px 20px;
+    }
+
+    #desktop-nav {
+        display: none;
+    }
+
+    #hamburger-nav,
+    .mobile-nav {
+        display: flex;
+    }
+
+    .nav-container,
+    .mobile-nav {
+        width: calc(100% - 40px);
+        height: 70px;
+    }
+
+    /* HERO */
+    .hero-section {
+        min-height: auto;
+        padding: 120px 24px 70px;
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+        gap: 45px;
+        text-align: center;
+    }
+
+    .hero-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(2.2rem, 10vw, 3.2rem);
+        line-height: 1.08;
+        letter-spacing: -0.04em;
+        margin-bottom: 18px;
+    }
+ 
+    .hero-description {
+        max-width: 520px;
+        font-size: 0.98rem;
+        line-height: 1.7;
+    }
+ 
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+    }
+
+    .hero-visual {
+        order: 2;
+        width: min(76vw, 320px);
+        min-height: 420px;
+        margin: 0 auto;
+    }
+
+    .image-frame {
+        width: min(310px, 78vw);
+        height: 390px;
+    }
+ 
+    .card-top {
+        right: 2%;
+    }
+ 
+    .card-bottom {
+        left: 2%;
+    }
+ 
+    /* PROOF / METRICS */
+    .proof-section {
+        padding: 0 20px;
+    }
+
+    .proof-grid {
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .proof-item {
+        padding: 20px;
+    }
+
+    .proof-item strong {
+        font-size: 1.45rem;
+    }
+ 
+    /* SECTION HEADINGS */
+    .section-heading {
+        margin-bottom: 35px;
+    }
+ 
+    /* ABOUT */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .about-copy {
+        max-width: 100%;
+    }
+ 
+    .info-cards {
+        width: 100%;
+    }
+
+    /* EDUCATION */
+    .education-timeline {
+        width: 100%;
+    }
+ 
+    .education-timeline::before {
+        display: none;
+    }
+ 
+    .education-card {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 24px;
+    }
+ 
+    .education-card::before {
+        display: none;
+    }
+ 
+    .education-year {
+        order: 1;
+    }
+ 
+    .education-content {
+        order: 2;
+    }
+ 
+    .education-content h3 {
+        font-size: 1.05rem;
+    }
+
+    /* EXPERIENCE */
+    .experience-card {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 25px;
+    }
+ 
+    /* SKILLS */
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* PROJECTS */
+    .projects-heading {
+        display: block;
+    }
+ 
+    .projects-heading .heading-description {
+        margin-top: 18px;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-project {
+        grid-column: auto;
+        display: block;
+    }
+
+    .project-image {
+        min-height: 230px;
+    }
+ 
+    /* CAPABILITIES */
+    .capabilities-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* CONTACT */
+    .contact-section {
+        padding: 90px 20px;
+    }
+ 
+    /* FOOTER */
+    footer {
+        width: calc(100% - 40px);
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+
+/* SMALL MOBILE (<=480px) */
+@media (max-width: 480px) {
+
+    .hero-section {
+        padding: 105px 18px 55px;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.25rem;
+    }
+ 
+    .hero-description {
+        font-size: 0.92rem;
+    }
+
+    .hero-buttons {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+ 
+    .primary-btn,
+    .secondary-btn {
+        width: 100%;
+    }
+
+    .hero-socials {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        width: min(78vw, 280px);
+        min-height: 350px;
+    }
+ 
+    .image-frame {
+        width: 260px;
+        height: 340px;
+    }
+ 
+    .floating-card {
+        min-width: 125px;
+        padding: 11px 13px;
+    }
+ 
+    .floating-card strong {
+        font-size: 0.7rem;
+    }
+ 
+    .card-top {
+        top: 15px;
+        right: 0;
+    }
+ 
+    .card-bottom {
+        bottom: 15px;
+        left: 0;
+    }
+
+    .proof-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .proof-item {
+        min-height: 95px;
+        padding: 16px;
+    }
+ 
+    .proof-item:nth-child(odd) {
+        border-left: 1px solid var(--border);
+    }
+ 
+    .contact-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+ 
+    .project-metrics {
+        grid-template-columns: 1fr;
+    }
+
+    .capabilities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-group,
+    .info-card {
+        padding: 23px;
+    }
+
 }

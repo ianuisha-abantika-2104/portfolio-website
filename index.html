@@ -3,135 +3,715 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anwesha Abantika Portfolio</title>
+    <meta name="description" content="Anwesha Abantika | Data Analyst Portfolio">
+    <title>Anwesha Abantika | Data Analyst</title>
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:title" content="Anwesha Abantika | Data Analyst">
+    <meta property="og:description" content="Data Analyst focused on Python, SQL, Power BI and Excel — turning raw data into actionable insights.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="./assets/Anwesha_Abantika.jpeg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Anwesha Abantika | Data Analyst">
+    <meta name="twitter:description" content="Data Analyst focused on Python, SQL, Power BI and Excel — turning raw data into actionable insights.">
+    <meta name="twitter:image" content="./assets/Anwesha_Abantika.jpeg">
+    <meta name="theme-color" content="#08090d">
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="mediaqueries.css">
 </head>
+
 <body>
-    <nav id="desktop-nav">
-        <div class="logo">Anwesha Abantika</div>
-        <div>
+    <!-- NAVIGATION -->
+    <header class="site-header">
+        <nav id="desktop-nav" class="nav-container">
+            <a href="#profile" class="logo">AA<span>.</span></a>
+
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
-                <li><a href="#skils">Skills</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-           </ul>
-        </div>
-    </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Anwesha Abantika</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
-        </div>
-    </nav>
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/anwesha-abantika-profile-pic.png" alt="Anwesha Abantika profile picture">
-        </div>
-        <div class="section__text">
-            <p class="section__text_p1">Hello, I'm</p>
-            <p class="title">Anwesha Abantika</p>
-            <p class="section__text_p2">Data Analyst</p>
-            <div class="btn-container">
-                <button class="btn btn-color-2" onclick="window.open('./assets/ANWESHA_ABANTIKA_DA_RESUME.pdf')">
-                    Download Resume
-                </button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                    Contact Info
-                </button>
-            </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="My Linkden Profile" class="icon" onclick="location.href='https://linkedin.com/in/anwesha-abantika-546b9a25a'">
-                <img src="./assets/github.png" alt="My Github Profile" class="icon" onclick="location.href='https://github.com/anweshaabantika123'">
-            </div>
-        </div>
-    </section>
-    <section id="about">
-        <p>Get To Know More</p>
-        <h1 class="title">About me</h1>
-        <div class="about-container">
-            <div class="about-details-container">
-                <div class="about-cards-row">
-                    <div class="details-container">
-                        <img src="./assets/education.png" alt="Education" class="icon">
+            </ul>
 
-                        <h2>Education</h2>
-                        <p>
-                            B.Tech in Electronics & Communication Engineering <br>
-                            Roland Institute Of Technology <br>
-                            2022 - 2026
-                        </p>
-                    </div>
-                    <div class="details-container">
-                        <img src="./assets/experience.png" alt="Experience" class="icon">
-                        <h2>Experience</h2>
+            <a class="nav-cta" href="./assets/Anwesha_Abantika_Resume.pdf" target="_blank" rel="noopener">
+                Resume ↗
+            </a>
+        </nav>
 
-                        <p>
-                            Fresher <br>
-                            Available for Data Analyst, Data Scientist and Python related roles
-                        </p>
-                    </div>
+        <nav id="hamburger-nav" class="mobile-nav">
+            <a href="#profile" class="logo">AA<span>.</span></a>
+
+            <div class="hamburger-menu">
+                <button class="hamburger-icon" onclick="toggleMenu()" aria-label="Open menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <div class="menu-links">
+                    <a href="#about" onclick="toggleMenu()">About</a>
+                    <a href="#education" onclick="toggleMenu()">Education</a>
+                    <a href="#experience" onclick="toggleMenu()">Experience</a>
+                    <a href="#skills" onclick="toggleMenu()">Skills</a>
+                    <a href="#projects" onclick="toggleMenu()">Projects</a>
+                    <a href="#contact" onclick="toggleMenu()">Contact</a>
                 </div>
-                <div class="text-container">
-                    <p>
-                        I’m Anwesha Abantika, an Electronics and Communication Engineering student with a strong passion for Data Analytics and Data Science. I enjoy working with data, solving problems, and building projects that combine technology with real-world applications.I have experience working with Python, SQL, Power BI, Excel, Data Cleaning, Data Visulaization, Exploratory Data Analysis, Feature Engineering and AWS to analyze data, create visualizations, and develop data-driven solutions.I love building projects, learning new technologies, and continuously improving my problem-solving skills. My goal is to grow as a Data Analyst and create solutions that are both practical and innovative.
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO -->
+        <section id="profile" class="hero-section">
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="availability">
+                        <span class="status-dot"></span>
+                        Open to Data Analyst opportunities
+                    </div>
+
+                    <p class="eyebrow">DATA ANALYST · PYTHON · SQL · POWER BI · EXCEL </p>
+
+                    <h1>
+                        Turning raw data into
+                        <span>actionable insights.</span>
+                    </h1>
+
+                    <p class="hero-description">
+                        I'm Anwesha Abantika, an Electronics & Communication Engineering graduate
+                        focused on Data Analytics and Data Science. I use Python, SQL, Power BI
+                        and Excel to clean, analyze and visualize data to uncover actionable
+                        business insights.
                     </p>
+
+                    <div class="hero-buttons">
+                        <a class="primary-btn" href="#projects">View Projects <span>↗</span></a>
+                        <a class="secondary-btn" href="./assets/Anwesha_Abantika_Resume.pdf" target="_blank" rel="noopener">
+                            Download Resume
+                        </a>
+                    </div>
+
+                    <div class="hero-socials">
+                        <a href="https://www.linkedin.com/in/anwesha-abantika-546b9a25a/" target="_blank" rel="noopener">
+                            LinkedIn ↗
+                        </a>
+                        <a href="https://github.com/ianuisha-abantika-2104" target="_blank" rel="noopener">
+                            GitHub ↗
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="visual-glow"></div>
+                    <div class="image-frame">
+                        <img src="./assets/Anwesha_Abantika.jpeg" alt="Anwesha Abantika">
+                    </div>
+                    <div class="floating-card card-top">
+                        <span>FOCUS</span>
+                        <strong>Data Analytics</strong>
+                    </div>
+                    <div class="floating-card card-bottom">
+                        <span>TOOLS</span>
+                        <strong>Python · SQL · BI</strong>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section id="skills">
-  <p class="section__text__p1">My Expertise</p>
-  <h1 class="title">Skills</h1>
+        </section>
 
-  <div class="skills-container">
+        <!-- PROOF / METRICS -->
+        <section class="proof-section">
+            <div class="proof-grid">
+                <div class="proof-item">
+                    <strong>5+</strong>
+                    <span>Analytics Projects</span>
+                </div>
+                <div class="proof-item">
+                    <strong>8K+</strong>
+                    <span>Netflix Titles Analyzed</span>
+                </div>
+                <div class="proof-item">
+                    <strong>₹129M</strong>
+                    <span>Sales Revenue Analyzed</span>
+                </div>
+                <div class="proof-item">
+                    <strong>2024</strong>
+                    <span>Python Internship</span>
+                </div>
+            </div>
+        </section>
 
-    <div class="skills-box">
-      <h2>Programming & Data</h2>
+        <!-- ABOUT -->
+        <section id="about" class="section">
+            <div class="section-heading">
+                <p class="eyebrow">PROFILE</p>
+                <h2>About me</h2>
+            </div>
 
-      <div class="skills-list">
-        <span class="skill-badge">🐍 Python</span>
-        <span class="skill-badge">🗄️ SQL</span>
-        <span class="skill-badge">🐼 Pandas</span>
-        <span class="skill-badge">🔢 NumPy</span>
-      </div>
-    </div>
+            <div class="about-grid">
+                <div class="about-copy">
 
-    <div class="skills-box">
-      <h2>Data Visualization</h2>
+                    <p class="lead">
+                        I’m a data-focused engineering graduate who enjoys transforming
+                        raw data into meaningful insights and practical business decisions.
+                    </p>
 
-      <div class="skills-list">
-        <span class="skill-badge">📊 Power BI</span>
-        <span class="skill-badge">📑 Excel</span>
-        <span class="skill-badge">📈 Matplotlib</span>
-        <span class="skill-badge">📉 Seaborn</span>
-      </div>
-    </div>
+                    <p>
+                        With a background in Electronics & Communication Engineering,
+                        I bring a strong analytical and problem-solving foundation.
+                        I work with Python, SQL, Power BI and Excel for data cleaning,
+                        exploratory analysis, visualization and business reporting.
+                    </p>
 
-    <div class="skills-box">
-      <h2>Cloud & Analytics</h2>
+                    <p>
+                        My projects cover customer churn, financial risk, sales analytics,
+                        content analysis and energy consumption, with a focus on identifying
+                        patterns, developing useful KPIs and communicating insights clearly.
+                    </p>
 
-      <div class="skills-list">
-        <span class="skill-badge">☁️ AWS</span>
-        <span class="skill-badge">📋 Data Analysis</span>
-        <span class="skill-badge">🧹 Data Cleaning</span>
-        <span class="skill-badge">📊 Dashboard Development</span>
-      </div>
-    </div>
+                </div>
 
-  </div>
-</section>
-   <script src="script.js"></script> 
+                <div class="info-cards">
+                    <article class="info-card">
+                        <span class="card-label">CAREER FOCUS</span>
+                        <h3>Data Analytics & Data Science</h3>
+                        <p>Business insights · BI dashboards · SQL analytics</p>
+                        <small>Open to entry-level opportunities</small>
+                    </article>
+
+                    <article class="info-card">
+                        <span class="card-label">CORE TOOLKIT</span>
+                        <h3>Python · SQL · Power BI</h3>
+                        <p>Data cleaning · EDA · DAX · Dashboard development</p>
+                        <small>Building practical analytics projects</small>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- EDUCATION -->
+        <section id="education" class="section section-muted">
+
+            <div class="section-heading">
+                <p class="eyebrow">ACADEMIC BACKGROUND</p>
+                <h2>Education</h2>
+            </div>
+
+            <div class="education-timeline">
+
+                <!-- BTECH -->
+                <article class="education-card education-current">
+
+                    <div class="education-year">
+                        2022 — 2026
+                    </div>
+
+                    <div class="education-content">
+                        <span class="education-level">B.TECH</span>
+                        <h3>
+                            Electronics & Communication Engineering
+                        </h3>
+
+                        <p>
+                            Roland Institute of Technology
+                        </p>
+                    </div>
+                </article>
+
+
+                <!-- INTERMEDIATE -->
+                <article class="education-card">
+                    
+                    <div class="education-year">
+                        2020 — 2022
+                    </div>
+
+                    <div class="education-content">
+                        <span class="education-level">INTERMEDIATE</span>
+
+                        <h3>
+                            Higher Secondary Education
+                        </h3>
+
+                        <p>
+                            Khalikote Higher Secondary School
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <!-- SECONDARY -->
+                <article class="education-card">
+
+                    <div class="education-year">
+                        2019
+                    </div>
+
+                    <div class="education-content">
+                        <span class="education-level">SECONDARY</span>
+
+                        <h3>
+                            Secondary Education
+                        </h3>
+
+                        <p>
+                            C D T Vidya Mandir
+                        </p>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- EXPERIENCE -->
+        <section id="experience" class="section section-muted">
+            <div class="section-heading">
+                <p class="eyebrow">EXPERIENCE</p>
+                <h2>Hands-on experience</h2>
+            </div>
+
+            <div class="experience-list">
+
+                <!-- DELOITTE -->
+                <article class="experience-card">
+                    <div class="experience-date">JUN 2025</div>
+
+                    <div class="experience-main">
+                        <div>
+                            <p class="experience-type">DATA ANALYTICS JOB SIMULATION</p>
+                            <h3>Deloitte</h3>
+                        </div>
+
+                        <ul>
+                            <li>Completed a practical Data Analytics job simulation focused on solving business-oriented analytical problems.</li>
+                            <li>Applied data analysis techniques to interpret datasets and identify meaningful insights.</li>
+                            <li>Strengthened analytical thinking, problem-solving and business communication skills.</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- MAIN FLOW -->
+                <article class="experience-card">
+                    <div class="experience-date">JUN 2024 — AUG 2024</div>
+
+                    <div class="experience-main">
+                        <div>
+                            <p class="experience-type">PYTHON PROGRAMMING INTERN</p>
+                            <h3>Main Flow Services & Technology</h3>
+                        </div>
+
+                        <ul>
+                            <li>Automated data processing workflows using Python.</li>
+                            <li>Performed web scraping using Python and BeautifulSoup.</li>
+                            <li>Worked with CSV and Excel datasets for data cleaning and reporting.</li>
+                            <li>Developed billing and currency conversion tools.</li>
+                        </ul>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section">
+            <div class="section-heading">
+                <p class="eyebrow">TECHNICAL TOOLKIT</p>
+                <h2>Skills</h2>
+            </div>
+
+            <div class="skills-grid">
+                <article class="skill-group">
+                    <span class="skill-number">01</span>
+                    <h3>Data Analytics</h3>
+                    <div class="skill-pills">
+                        <span>Python</span>
+                        <span>SQL</span>
+                        <span>Pandas</span>
+                        <span>NumPy</span>
+                        <span>Excel</span>
+                        <span>DAX</span>
+                    </div>
+                </article>
+
+                <article class="skill-group">
+                    <span class="skill-number">02</span>
+                    <h3>Business Intelligence</h3>
+                    <div class="skill-pills">
+                        <span>Power BI</span>
+                        <span>Tableau</span>
+                        <span>KPI Design</span>
+                        <span>Dashboards</span>
+                        <span>Data Visualization</span>
+                    </div>
+                </article>
+
+                <article class="skill-group">
+                    <span class="skill-number">03</span>
+                    <h3>Data & Visualization</h3>
+                    <div class="skill-pills">
+                        <span>EDA</span>
+                        <span>Data Cleaning</span>
+                        <span>Matplotlib</span>
+                        <span>Seaborn</span>
+                        <span>Feature Engineering</span>
+                    </div>
+                </article>
+
+                <article class="skill-group">
+                    <span class="skill-number">04</span>
+                    <h3>Tools & Platforms</h3>
+
+                    <div class="skill-pills">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>Jupyter Notebook</span>
+                        <span>Databricks</span>
+                        <span>AWS S3</span>
+                        <span>Snowflake</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section section-muted">
+            <div class="section-heading projects-heading">
+                <div>
+                    <p class="eyebrow">SELECTED WORK</p>
+                    <h2>Projects</h2>
+                </div>
+                <p class="heading-description">
+                    Practical analytics projects focused on finding patterns,
+                    building dashboards and communicating business insights.
+                </p>
+            </div>
+
+            <div class="project-filters" aria-label="Project filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="python">Python</button>
+                <button class="filter-btn" data-filter="powerbi">Power BI</button>
+                <button class="filter-btn" data-filter="sql">SQL</button>
+                <button class="filter-btn" data-filter="databricks">Databricks</button>
+                <button class="filter-btn" data-filter="tableau">Tableau</button>
+            </div>
+
+            <div class="projects-container">
+                <!-- FEATURED PROJECT -->
+                <article class="project-card featured-project show" data-category="powerbi sql python">
+                    <div class="project-image">
+                        <img src="./assets/customer_churn_dashboard.png" alt="Customer Churn & Risk Analytics dashboard">
+                        <span class="featured-label">FEATURED PROJECT</span>
+                    </div>
+
+                    <div class="project-content">
+                        <p class="project-type">CUSTOMER ANALYTICS · POWER BI · DAX </p>
+                        <h3>Customer Churn & Risk Analytics</h3>
+
+                        <p>
+                            Analyzed 7K+ customer records to identify churn patterns, service adoption,
+                            customer segments and revenue risk using Power BI, DAX, SQL and Python.
+                        </p>
+
+                        <div class="project-metrics">
+                            <div><strong>26.54%</strong><span>Churn Rate</span></div>
+                            <div><strong>7K+</strong><span>Customers</span></div>
+                            <div><strong>~2K</strong><span>Churned</span></div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span>Power BI</span>
+                            <span>DAX</span>
+                            <span>SQL</span>
+                            <span>Python</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/ianuisha-abantika-2104/Telco_Customer_Churn_Analysis" target="_blank" rel="noopener">
+                                GitHub ↗
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROJECT 2 -->
+                <article class="project-card show" data-category="python powerbi">
+                    <div class="project-image">
+                        <img src="./assets/netflix_content_analysis_dashboard.png" alt="Netflix Content Analysis dashboard">
+                    </div>
+
+                    <div class="project-content">
+                        <p class="project-type">PYTHON · PANDAS · POWER BI</p>
+                        <h3>Netflix Content Analysis</h3>
+
+                        <p>
+                           Performed exploratory data analysis on 8K+ Netflix titles to identify
+                           content distribution, release trends, genres and country-level patterns,
+                           and presented findings through an interactive Power BI dashboard. 
+                        </p>
+
+                        <div class="project-metrics">
+                            <div><strong>69.7%</strong><span>Movies</span></div>
+                            <div><strong>30.3%</strong><span>TV Shows</span></div>
+                            <div><strong>123</strong><span>Countries</span></div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>Pandas</span>
+                            <span>EDA</span>
+                            <span>Power BI</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/ianuisha-abantika-2104/netflix-content-insights" target="_blank" rel="noopener">
+                                GitHub ↗
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROJECT 3 -->
+                <article class="project-card show" data-category="powerbi">
+                    <div class="project-image">
+                        <img src="./assets/sales_insights_analysis_dashboard.png" alt="Sales Analytics Dashboard">
+                    </div>
+
+                    <div class="project-content">
+                        <p class="project-type">POWER BI · EXCEL</p>
+                        <h3>Sales Analytics Dashboard</h3>
+
+                        <p>
+                           Built an interactive Power BI dashboard to analyze ₹129M in revenue,
+                           order volume, units sold, product categories and regional performance,
+                           helping identify key revenue-driving segments. 
+                        </p>
+
+                        <div class="project-metrics">
+                            <div><strong>₹129M</strong><span>Revenue</span></div>
+                            <div><strong>3.51K</strong><span>Orders</span></div>
+                            <div><strong>74%</strong><span>Electronics Revenue</span></div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span>Power BI</span>
+                            <span>Excel</span>
+                            <span>KPI Design</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/ianuisha-abantika-2104/sales_insights_analytics" target="_blank" rel="noopener">
+                                GitHub ↗
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4 -->
+                <article class="project-card" data-category="sql databricks">
+
+                    <div class="project-image project-visual-edufin">
+
+                        <div class="edufin-visual">
+                            <span class="visual-label">PORTFOLIO RISK</span>
+
+                            <strong>EduFin</strong>
+
+                            <div class="risk-stats">
+                                <div>
+                                    <span>Portfolio</span>
+                                    <b>₹204.82 Cr</b>
+                                </div>
+
+                                <div>
+                                    <span>Default Rate</span>
+                                    <b>11.8%</b>
+                                </div>
+                            </div>
+
+                            <div class="risk-bar">
+                                <span></span>
+                            </div>
+
+                            <small>SQL · Databricks</small>
+                        </div>
+
+                    </div>
+
+                    <div class="project-content">
+
+                        <div class="project-top">
+                            <span class="project-type">FINANCIAL ANALYTICS</span>
+                        </div>
+
+                        <h3>EduFin Portfolio Risk Analysis</h3>
+
+                        <p>
+                            Conducted an end-to-end financial risk analysis using SQL and Databricks
+                            to evaluate portfolio health, customer risk, default trends and
+                            default exposure, translating findings into business recommendations.
+                        </p>
+
+                        <div class="project-metrics">
+                            <div>
+                                <strong>₹204.82 Cr</strong>
+                                <span>Portfolio</span>
+                            </div>
+
+                            <div>
+                                <strong>11.8%</strong>
+                                <span>Default Rate</span>
+                            </div>
+
+                            <div>
+                                <strong>₹35.18 Cr</strong>
+                                <span>Default Exposure</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span>SQL</span>
+                            <span>Databricks</span>
+                            <span>Risk Analysis</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/ianuisha-abantika-2104/Edufin_Portfolio_Risk_Analysis" target="_blank" rel="noopener">
+                                GitHub ↗
+                            </a>
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Project 5 -->
+                <article class="project-card show" data-category="sql tableau">
+
+                    <div class="project-image">
+                        <img src="./assets/energy_consumption_analysis_dashboard.png"
+                            alt="Energy Consumption Analysis dashboard">
+                    </div>
+
+                    <div class="project-content">
+
+                        <p class="project-type">AWS · SNOWFLAKE · SQL · TABLEAU</p>
+
+                        <h3>Energy Consumption Analysis</h3>
+
+                        <p>
+                            Analyzed energy consumption patterns across 25 countries, 6 regions,
+                            rural/urban areas, and 5 energy sources using SQL and Tableau. Built an
+                            interactive dashboard comparing KWh and CSU consumption, identifying
+                            Wind as the leading source and rural areas consuming ~5% more than urban.
+                        </p>
+
+                        <div class="project-metrics">
+                            <div><strong>25</strong><span>Countries</span></div>
+                            <div><strong>920K+</strong><span>KWh Analyzed</span></div>
+                            <div><strong>23%</strong><span>Wind Energy Share</span></div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span>AWS</span>
+                            <span>Snowflake</span>
+                            <span>SQL</span>
+                            <span>Tableau</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/ianuisha-abantika-2104/Energy_Consumption_Analysis"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                                GitHub ↗
+                            </a>
+                        </div>
+
+                    </div>
+                </article>
+                
+            </div>
+        </section>
+
+        <!-- WHAT I CAN DO -->
+        <section class="section">
+            <div class="section-heading">
+                <p class="eyebrow">VALUE I BRING</p>
+                <h2>What I can do</h2>
+            </div>
+
+            <div class="capabilities-grid">
+                <article>
+                    <span>01</span>
+                    <h3>Analyze</h3>
+                    <p>Clean, transform and explore datasets to uncover useful patterns.</p>
+                </article>
+
+                <article>
+                    <span>02</span>
+                    <h3>Query</h3>
+                    <p>Use SQL to answer business questions and extract meaningful metrics.</p>
+                </article>
+
+                <article>
+                    <span>03</span>
+                    <h3>Visualize</h3>
+                    <p>Build clear dashboards and KPI systems that make data easier to understand.</p>
+                </article>
+
+                <article>
+                    <span>04</span>
+                    <h3>Communicate</h3>
+                    <p>Translate analytical findings into concise, decision-focused insights.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact-section">
+            <div class="contact-inner">
+                <p class="eyebrow">LET'S CONNECT</p>
+                <h2>Have an opportunity<br><span>worth discussing?</span></h2>
+                <p>
+                    I'm open to entry-level Data Analyst, Data Science and Python-related opportunities.
+                </p>
+
+                <div class="contact-actions">
+                    <a class="primary-btn" href="mailto:anweshaabantika@gmail.com">
+                        Email Me ↗
+                    </a>
+                    <a class="secondary-btn" href="https://www.linkedin.com/in/anwesha-abantika-546b9a25a/" target="_blank" rel="noopener">
+                        LinkedIn ↗
+                    </a>
+                </div>
+
+                <div class="contact-links">
+                    <a href="mailto:anweshaabantika@gmail.com">anweshaabantika@gmail.com</a>
+                    <a href="https://github.com/ianuisha-abantika-2104" target="_blank" rel="noopener">GitHub</a>
+                    <a href="https://www.linkedin.com/in/anwesha-abantika-546b9a25a/" target="_blank" rel="noopener">LinkedIn</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Anwesha Abantika</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
